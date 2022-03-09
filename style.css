@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 auto;
+  width: 120rem;
+  background-color: #777;
+  height: 100vh;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+}
+
+/*///////////////////// 
+HEADER SECTION
+////////////////////*/
+.header {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-search {
+  padding: 0 2rem;
+  font-weight: 600;
+  height: 5rem;
+  border: none;
+  background-color: #c92a2a;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  font-size: 2rem;
+  box-shadow: 0rem 0rem 1.5rem 0rem #444;
+  overflow: hidden;
+}
+
+.input-search::placeholder {
+  font-weight: 500;
+  color: #444;
+}
+.btn-search {
+  font-size: 2rem;
+}
+
+.error-message {
+  text-align: center;
+  font-size: 2rem;
+}
+.btn {
+  padding: 0 2rem;
+  font-weight: 600;
+  height: 5rem;
+  border: none;
+  background-color: #c92a2a;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: solid #777 2px;
+  box-shadow: 0rem 0rem 1.5rem 0rem #444;
+  overflow: hidden;
+  cursor: pointer;
+}
+.icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.sunny {
+  color: orangered;
+}
+.cold {
+  color: blue;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0rem 0.4rem 1.5rem 0rem #444;
+}
+
+/*/ ////////////////////
+CRYPTO SECTION
+////////////////////*/
+.section-container {
+  background-color: aliceblue;
+  border-radius: 8px;
+}
+.weather-section {
+  padding: 9.6rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
+  justify-items: center;
+  row-gap: 4rem;
+}
+.primary-header {
+  text-align: center;
+  padding: 2rem;
+}
+
+.weather-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border: #333 2px solid;
+  border-radius: 8px;
+  padding: 2rem 4rem;
+  box-shadow: 0rem 0rem 2rem 0rem #444;
+}
+.temperature-data {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.remove-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  height: auto;
+  border-radius: 6px;
+}
