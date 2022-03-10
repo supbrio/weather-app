@@ -4,6 +4,7 @@ const form = document.querySelector(".search-form");
 const errorMessages = document.querySelector(".error-messages");
 const searchInput = document.querySelector(".input-search");
 const body = document.querySelector("body");
+const errorMessage = document.querySelector('.error-message');
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -11,9 +12,8 @@ form.addEventListener("submit", function (e) {
 });
 
 const throwError = function (error) {
-  // error paska here
-
-  errorMessages.insertAdjacentHTML("afterbegin", error);
+  errorMessage.innerHTML = error;
+  errorMessage.style.opacity = '100';
 };
 
 sectionWeather.addEventListener("click", function (e) {
@@ -28,18 +28,21 @@ const getWeather = async function (country) {
     const resCoords = await fetch(
       `https://restcountries.com/v2/name/${country}`
     );
-    if (!resCoords.ok)
-      return throwError('<p class="error-message">Country not found!</p>');
+    if (!resCoords.ok)return throwError('Country not found!');
 
+    if (resCoords.ok) errorMessage.style.opacity = '0';
     const dataCoords = await resCoords.json();
     console.log(dataCoords[0].capital);
-    // console.log(dataCoords)
+
     const [lat, lng] = dataCoords[0].latlng;
 
     // Get weather
     const resWeather = await fetch(
       `http://www.7timer.info/bin/api.pl?lon=${lng}&lat=${lat}&product=civil&output=json`
     );
+    if (!resWeather.ok) return throwError(`Couldn't get weather!`);
+    
+    if (resWeather.ok) errorMessage.style.opacity = '0';
     const dataWeather = await resWeather.json();
     console.log(dataWeather);
     console.log(dataWeather.dataseries[0]);

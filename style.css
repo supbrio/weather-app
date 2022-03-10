@@ -9,9 +9,9 @@ html {
 }
 
 body {
-  margin: 0 auto;
+  margin: auto;
   width: 120rem;
-  background-color: #777;
+  background-color: #e7f5ff;
   height: 100vh;
   font-family: sans-serif;
   font-size: 1.6rem;
@@ -23,6 +23,13 @@ body {
 /*///////////////////// 
 HEADER SECTION
 ////////////////////*/
+.thermo-img {
+  width: 16rem;
+  margin: 0 auto;
+  /* background-color: aliceblue; */
+  border-radius: 9px;
+}
+
 .header {
   height: 20rem;
   display: flex;
@@ -42,7 +49,7 @@ HEADER SECTION
   font-weight: 600;
   height: 5rem;
   border: none;
-  background-color: #c92a2a;
+  background-color: #d0ebff;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   font-size: 2rem;
@@ -56,18 +63,20 @@ HEADER SECTION
 }
 .btn-search {
   font-size: 2rem;
+  background-color: #339af0;
 }
 
 .error-message {
   text-align: center;
   font-size: 2rem;
+  opacity: 0;
 }
 .btn {
   padding: 0 2rem;
   font-weight: 600;
   height: 5rem;
   border: none;
-  background-color: #c92a2a;
+
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-left: solid #777 2px;
@@ -94,7 +103,10 @@ HEADER SECTION
 CRYPTO SECTION
 ////////////////////*/
 .section-container {
-  background-color: aliceblue;
+  margin-top: 4rem;
+  background-color: #d0ebff;
+
+  border: solid #444 2px;
   border-radius: 8px;
 }
 .weather-section {
@@ -121,7 +133,7 @@ CRYPTO SECTION
   gap: 2rem;
   border: #333 2px solid;
   border-radius: 8px;
-  padding: 2rem 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   box-shadow: 0rem 0rem 2rem 0rem #444;
 }
 .temperature-data {
@@ -136,4 +148,12 @@ CRYPTO SECTION
   padding: 0.5rem;
   height: auto;
   border-radius: 6px;
+  background-color: #c92a2a;
+  /* background-color: inherit; */
+}
+
+.icon.remove {
+  width: 1.6rem;
+  height: 1.6rem;
+  /* color: #c92a2a; */
 }
